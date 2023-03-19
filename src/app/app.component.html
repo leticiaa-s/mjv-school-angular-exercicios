@@ -1,0 +1,13 @@
+<app-header></app-header>
+<app-listar-colaboradores></app-listar-colaboradores>
+<div>
+    <h1>{{ titulo }}</h1>
+    <h2>Colaboradores MJV</h2>
+    <ul>
+        <li>Id: {{ colaborador.id }}</li>
+        <li>Nome: {{ colaborador.nome }}</li>
+        <li>Salário: {{ colaborador.salario | currency: 'BRL'}}</li>
+        <li>Cargo: {{ colaborador.cargo }}</li>
+    </ul>
+</div>
+<app-footer></app-footer>

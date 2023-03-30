@@ -1,1 +1,44 @@
-<!-- <p>listar-colaboradores works!</p> -->
+<body>
+  <h2 appColor>Colaboradores MJV</h2>
+
+  <div>
+    <div *ngFor="let colaboradores of arrayColaboradores">
+      <div *ngIf="colaboradores.ativo">
+        <ul>
+          <img class="foto-perfil" src="{{ colaboradores.fotoPerfil }}"/>
+          <li>Id: {{ colaboradores.id }}</li>
+          <li>Nome: {{ colaboradores.nome }}</li>
+          <li>Salário: {{ colaboradores.salario | currency : "BRL" }}</li>
+          <li>Cargo: {{ colaboradores.cargo }}</li>
+          <li id="status" [ngClass]="{ ativo: colaboradores.ativo }">
+            Status:
+            {{ colaboradores.ativo == true ? "Funcionário ativo" : "" }}
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="colaboradores-total">
+    <h2 appColor>Histórico de colaboradores</h2>
+    <button class="botao-lista" (click)="exibeColaboradoresTotal()">
+      Exibir histórico
+    </button>
+    <div *ngFor="let colaboradores of arrayColaboradores">
+      <div *ngIf="exibirColaboradores">
+        <ul>
+          <img class="foto-perfil" src="{{ colaboradores.fotoPerfil }}"/>
+          <li>Id: {{ colaboradores.id }}</li>
+          <li>Nome: {{ colaboradores.nome }}</li>
+          <li>Salário: {{ colaboradores.salario | currency : "BRL" }}</li>
+          <li>Cargo: {{ colaboradores.cargo }}</li>
+          <li [ngClass]="{ inativo: !colaboradores.ativo }">
+            {{ colaboradores.ativo == false ? "Funcionário desligado" : "" }}
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</body>
+
+<app-footer></app-footer>

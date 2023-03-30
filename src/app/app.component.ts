@@ -6,14 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'exercicio-modulos';
 
-  titulo = "Exercício de Módulos"
-
-  colaborador = {
-    id: 7,
-    nome: 'Nathan Carlos',
-    salario: 4500,
-    cargo: 'Desenvolvedor Pleno'
-  }
 }

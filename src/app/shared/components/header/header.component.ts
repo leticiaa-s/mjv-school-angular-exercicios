@@ -7,4 +7,6 @@ import { Component } from '@angular/core';
 })
 export class HeaderComponent {
 
+  titulo = "Exercício de Módulos"
+  titulo2 = "Exercício de Diretivas"
 }

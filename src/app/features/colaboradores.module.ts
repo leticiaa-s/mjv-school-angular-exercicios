@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ListarColaboradoresComponent } from './colaboradores/listar-colaboradores/listar-colaboradores.component';
+import { SharedModule } from '../shared/shared.module';
 
 
 
@@ -9,7 +10,8 @@ import { ListarColaboradoresComponent } from './colaboradores/listar-colaborador
     ListarColaboradoresComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    SharedModule
   ],
   exports: [
     ListarColaboradoresComponent
